@@ -197,7 +197,7 @@
         {
           "comment": "variables",
           "name": "variable.other.symboscript",
-          "match": "[a-z][a-z0-9_]*",
+          "match": "[A-Za-z_][A-Za-z0-9_]*",
           "captures": {
             "1": {
               "name": "constant.numeric.symboscript"
