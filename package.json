@@ -1,0 +1,41 @@
+{
+  "name": "symboscript-vs",
+  "displayName": "SymboScript-vs",
+  "description": "Official language support for SymboScrypt",
+  "version": "0.1.1",
+  "publisher": "symboscript",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/symboscript/symboscript-vs"
+  },
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "symboscript",
+        "aliases": [
+          "SymboScript",
+          "symboscript"
+        ],
+        "extensions": [
+          ".syms"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "symboscript",
+        "scopeName": "source.symboscript",
+        "path": "./syntaxes/symboscript.tmLanguage.json"
+      }
+    ]
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "SymboScript",
+  "scopeName": "source.symboscript",
+  "patterns": [
+    { "include": "#comment" },
+    { "include": "#function" },
+    { "include": "#number" },
+    { "include": "#keyword" },
+    { "include": "#punctuation" },
+    { "include": "#string" },
+    { "include": "#variables" }
+  ],
+  "repository": {
+    "comment": {
+      "comment": "Comments",
+      "patterns": [
+        {
+          "name": "comment.block.doc.symboscript",
+          "begin": "#/",
+          "end": "/#"
+        },
+        {
+          "name": "comment.line.symboscript",
+          "begin": "#",
+          "end": "\n"
+        }
+      ]
+    },
+
+    "function": {
+      "patterns": [
+        {
+          "comment": "Function call",
+          "name": "meta.function.call.symboscript",
+          "match": "([A-Za-z0-9_]+)((\\[))",
+          "captures": {
+            "1": {
+              "name": "entity.name.function.symboscript"
+            },
+            "2": {
+              "name": "punctuation.brackets.square.symboscript"
+            }
+          }
+        },
+        {
+          "comment": "Function declaration",
+          "name": "meta.name.function.symboscript",
+          "match": "\\b(fn)\\s+([A-Za-z0-9_]+)((\\[))",
+          "captures": {
+            "1": {
+              "name": "keyword.other.fn.symboscript"
+            },
+            "2": {
+              "name": "entity.name.function.symboscript"
+            },
+            "4": {
+              "name": "punctuation.brackets.square.symboscript"
+            }
+          }
+        }
+      ]
+    },
+
+    "number": {
+      "comment": "Numbers",
+      "patterns": [
+        {
+          "name": "constant.numeric.symboscript",
+          "match": "(\\.|)[0-9]+"
+        }
+      ]
+    },
+
+    "keyword": {
+      "patterns": [
+        {
+          "name": "keyword.control.symboscript",
+          "match": "\\b(if|else|while|for|loop|return|yield|async|await|break|continue|in)\\b"
+        },
+        {
+          "name": "keyword.other.fn.symboscript",
+          "match": "\\b(fn)\\b"
+        },
+        {
+          "name": "keyword.other.let.symboscript",
+          "match": "\\b(let)\\b"
+        },
+        {
+          "name": "keyword.other.bool.symboscript",
+          "match": "\\b(true|false)\\b"
+        },
+        {
+          "comment": "logical operators",
+          "name": "keyword.operator.logical.symboscript",
+          "match": "(\\||\\|\\||&|&&|<<|>>|!)(?!=)"
+        },
+        {
+          "comment": "assignment operators",
+          "name": "keyword.operator.assignment.symboscript",
+          "match": "(\\+=|-=|\\*=|/=|%=|\\^=|&=|\\|=|<<=|>>=)"
+        },
+        {
+          "comment": "single equal",
+          "name": "keyword.operator.assignment.equal.symboscript",
+          "match": "(?<![<>])=(?!=|>)"
+        },
+        {
+          "comment": "comparison operators",
+          "name": "keyword.operator.comparison.symboscript",
+          "match": "(=(=)?(?!>)|!=|<=|(?<!=)>=)"
+        },
+        {
+          "comment": "math operators",
+          "name": "keyword.operator.math.symboscript",
+          "match": "(\\^|([+%]|(\\*(?!\\w)))(?!=))|(-(?!>))|(/(?!/))"
+        },
+        {
+          "comment": "range operator",
+          "name": "keyword.operator.range.symboscript",
+          "match": "\\.\\."
+        },
+        {
+          "comment": "dot expr access",
+          "name": "keyword.operator.access.dot.expr.symboscript",
+          "match": "\\.[^\\w]"
+        },
+        {
+          "comment": "dot access",
+          "name": "keyword.operator.access.dot.symboscript",
+          "match": "\\."
+        }
+      ]
+    },
+
+    "punctuation": {
+      "patterns": [
+        {
+          "comment": "comma",
+          "name": "punctuation.comma.symboscript",
+          "match": ","
+        },
+        {
+          "comment": "curly braces",
+          "name": "punctuation.brackets.curly.symboscript",
+          "match": "[{}]"
+        },
+        {
+          "comment": "parentheses, round brackets",
+          "name": "punctuation.brackets.round.symboscript",
+          "match": "[()]"
+        },
+        {
+          "comment": "semicolon",
+          "name": "punctuation.semi.symboscript",
+          "match": ";"
+        },
+        {
+          "comment": "square brackets",
+          "name": "punctuation.brackets.square.symboscript",
+          "match": "[\\[\\]]"
+        }
+      ]
+    },
+
+    "string": {
+      "comment": "Strings",
+      "patterns": [
+        {
+          "name": "string.quoted.double.symboscript",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [{ "include": "#escape" }]
+        },
+        {
+          "name": "string.quoted.single.symboscript",
+          "begin": "'",
+          "end": "'",
+          "patterns": [{ "include": "#escape" }]
+        },
+        {
+          "name": "string.quoted.other.symboscript",
+          "begin": "`",
+          "end": "`",
+          "patterns": [{ "include": "#escape" }]
+        }
+      ]
+    },
+
+    "escape": {
+      "name": "constant.character.escape.symboscript",
+      "match": "\\\\."
+    },
+
+    "variables": {
+      "patterns": [
+        {
+          "comment": "variables",
+          "name": "variable.other.symboscript",
+          "match": "[a-z][a-z0-9_]*",
+          "captures": {
+            "1": {
+              "name": "constant.numeric.symboscript"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
