@@ -76,7 +76,7 @@
       "patterns": [
         {
           "name": "keyword.control.symboscript",
-          "match": "\\b(if|else|while|for|loop|return|yield|async|await|break|continue|in)\\b"
+          "match": "\\b(if|else|while|for|loop|return|yield|await|break|continue|in)\\b"
         },
         {
           "name": "keyword.other.fn.symboscript",
@@ -85,6 +85,10 @@
         {
           "name": "keyword.other.let.symboscript",
           "match": "\\b(let)\\b"
+        },
+        {
+          "name": "keyword.other.async.symboscript",
+          "match": "\\b(async)\\b"
         },
         {
           "name": "keyword.other.bool.symboscript",

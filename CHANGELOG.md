@@ -6,6 +6,10 @@ All notable changes to the "symboscript-vs" extension will be documented in this
 
 - Nothing
 
+## [0.1.3] - 2023-12-29
+
+- fix syntax highlighting (async)
+
 ## [0.1.2] - 2023-12-29
 
 - fix syntax highlighting (variables)
