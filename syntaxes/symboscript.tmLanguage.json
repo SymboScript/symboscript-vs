@@ -76,7 +76,7 @@
       "patterns": [
         {
           "name": "keyword.control.symboscript",
-          "match": "\\b(if|else|while|for|loop|return|yield|await|break|continue|in)\\b"
+          "match": "\\b(if|else|while|for|loop|return|yield|await|delete|new|break|continue|in)\\b"
         },
         {
           "name": "keyword.other.fn.symboscript",
@@ -93,6 +93,10 @@
         {
           "name": "keyword.other.bool.symboscript",
           "match": "\\b(true|false)\\b"
+        },
+        {
+          "name": "keyword.other.try-catch.symboscript",
+          "match": "\\b(try|catch|finally)\\b"
         },
         {
           "comment": "logical operators",
