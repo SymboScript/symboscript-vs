@@ -99,6 +99,10 @@
           "match": "\\b(try|catch|finally)\\b"
         },
         {
+          "name": "keyword.other.scope.symboscript",
+          "match": "\\b(scope)\\b"
+        },
+        {
           "comment": "logical operators",
           "name": "keyword.operator.logical.symboscript",
           "match": "(\\||\\|\\||&|&&|<<|>>|!)(?!=)"
