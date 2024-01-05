@@ -2,7 +2,7 @@
   "name": "symboscript-vs",
   "displayName": "SymboScript-vs",
   "description": "Official language support for SymboScrypt",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "publisher": "symboscript",
   "license": "MIT",
   "repository": {

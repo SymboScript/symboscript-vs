@@ -103,6 +103,14 @@
           "match": "\\b(scope)\\b"
         },
         {
+          "name": "keyword.other.symboscript",
+          "match": "\\b(mut|context)\\b"
+        },
+        {
+          "name": "keyword.other.logic.symboscript",
+          "match": "\\b(and|or|not|xor)\\b"
+        },
+        {
           "comment": "logical operators",
           "name": "keyword.operator.logical.symboscript",
           "match": "(\\||\\|\\||&|&&|<<|>>|!)(?!=)"
