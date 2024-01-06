@@ -76,7 +76,7 @@
       "patterns": [
         {
           "name": "keyword.control.symboscript",
-          "match": "\\b(if|else|while|for|loop|return|yield|await|delete|new|break|continue|in|import|as)\\b"
+          "match": "\\b(if|else|while|for|loop|return|yield|throw|await|delete|new|break|continue|in|import|as)\\b"
         },
         {
           "name": "keyword.other.fn.symboscript",
